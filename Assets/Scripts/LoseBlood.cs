@@ -15,12 +15,12 @@ public class LoseBlood : MonoBehaviour
 
     
     public float timeRemaining = 3;
-    public int bloodCount = 10;
+    public int bloodCount = 15;
    
 
 
     string currentBloodText = "Current blood:";
-    string youLostText = "You Lost...";
+    string youLostText = "You Lost! Restarting...";
     string playingText = "   ";
 
 

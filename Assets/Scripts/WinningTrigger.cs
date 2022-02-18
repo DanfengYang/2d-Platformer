@@ -10,7 +10,7 @@ public class WinningTrigger: MonoBehaviour
     [SerializeField] private TMP_Text winningText;
     [SerializeField] private TMP_FontAsset font1;
 
-    public float timeRemaining = 10;
+    public float timeRemaining = 15;
     string youWonText = "You Won!!!";
 
     bool won = false;
