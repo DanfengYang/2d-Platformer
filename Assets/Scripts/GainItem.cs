@@ -13,7 +13,7 @@ public class GainItem : MonoBehaviour
     //public bool checkedDoor = false;
 
     
-    bool canDestroy = false;
+    
    
     public int itemNumber = 0;
     

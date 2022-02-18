@@ -9,26 +9,33 @@ public class Ladder : MonoBehaviour
     PlatformEffector2D  platformEffector;
 
     bool activated = false;
-    int colorR = 125;
-    int colorG = 145;
-    int colorB = 225;
-    
+    int colorR = 0;
+    int colorG = 0;
+    int colorB = 0;
+
+    GameObject player;
+    //declare the player
+    GainItem gainitem;
+    //store GainItem into gainitem
+
     void Start()
     {
-       
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            platformEffector = gameObject.GetComponent <PlatformEffector2D> ();
+        
 
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        platformEffector = gameObject.GetComponent<PlatformEffector2D>();
 
-
+        player = GameObject.FindGameObjectWithTag("Player");
+        //get the player
+        gainitem = player.GetComponent<GainItem>();
     }
 
     
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(gainitem.itemNumber == 3)
         {
 
 

@@ -8,26 +8,33 @@ public class LoseBlood : MonoBehaviour
 
 {
 
-    [SerializeField] private TMP_Text artifactText;
+    [SerializeField] private TMP_Text bloodText;
+    [SerializeField] private TMP_Text losingText;
     [SerializeField] private TMP_FontAsset font1;
 
 
+    
+    public float timeRemaining = 3;
+    
 
 
 
-   
+
 
     public int bloodCount = 10;
    
 
 
-    string bloodText = "Current blood:";
+    string currentBloodText = "Current blood:";
+    string youLostText = "You Lost...";
+    string playingText = "   ";
 
 
     void Start()
     {
         //artifactText.text = numberText;
-        artifactText.font = font1;
+        bloodText.font = font1;
+        losingText.font = font1;
     }
 
 
@@ -47,7 +54,7 @@ public class LoseBlood : MonoBehaviour
 
             bloodCount --;
             Debug.Log("blood = " + bloodCount);
-            artifactText.text = bloodText + bloodCount;
+            bloodText.text = currentBloodText + bloodCount;
 
 
         }
@@ -66,11 +73,22 @@ public class LoseBlood : MonoBehaviour
 
     void Update()
     {
-                if (bloodCount <= 0)
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (timeRemaining > 0 && bloodCount <= 0)
+
+        {
+            losingText.text = youLostText;
+            timeRemaining -= Time.deltaTime;
+        }
+
+        if (timeRemaining <= 0)
+
+        {
+            
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
                 }
-            }
-        }
+    }
+
+
+}
 
