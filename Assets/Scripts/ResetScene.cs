@@ -21,7 +21,7 @@ public class ResetScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            //if (bloodCount <= 0)
+          
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 

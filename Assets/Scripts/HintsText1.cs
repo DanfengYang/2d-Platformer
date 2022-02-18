@@ -8,7 +8,7 @@ public class HintsText1 : MonoBehaviour
 
     string objective = "Try to escape from this place! ";
     string hint1 = "The sign says: To win, you need all 3 artifacts to activate the sacret ladder. ";
-    string hint2 = "The sign says: All three artifacts are collected! Ladder now activated.";
+    string hint2 = "The sign says: All 3 artifacts are collected! The ladder is now activated. Free free to jump on it.";
 
     //bool checkedLadder = false;
 

@@ -9,9 +9,7 @@ public class Ladder : MonoBehaviour
     PlatformEffector2D  platformEffector;
 
     bool activated = false;
-    int colorR = 0;
-    int colorG = 0;
-    int colorB = 0;
+    
 
     GameObject player;
     //declare the player
@@ -42,7 +40,11 @@ public class Ladder : MonoBehaviour
             if (!activated)
             {
                 activated = true;
-                //float alphaColor = Random.Range(0f, 1f);
+                
+                
+                float colorR = Random.Range(0f, 1f);
+                float colorG= Random.Range(0f, 1f);
+                float colorB = Random.Range(0f, 1f);
                 spriteRenderer.color = new Color(colorR,colorG,colorB,0.5f);
 
                 //platformEffector.useOneWay.!enabled= ;

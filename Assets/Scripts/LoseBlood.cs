@@ -15,12 +15,6 @@ public class LoseBlood : MonoBehaviour
 
     
     public float timeRemaining = 3;
-    
-
-
-
-
-
     public int bloodCount = 10;
    
 
@@ -30,11 +24,19 @@ public class LoseBlood : MonoBehaviour
     string playingText = "   ";
 
 
+    GameObject player;
+    GainItem gainitem;
+    
+
+
     void Start()
     {
-        //artifactText.text = numberText;
+        
         bloodText.font = font1;
         losingText.font = font1;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        gainitem = player.GetComponent<GainItem>();
     }
 
 
@@ -78,6 +80,7 @@ public class LoseBlood : MonoBehaviour
         {
             losingText.text = youLostText;
             timeRemaining -= Time.deltaTime;
+            gainitem.itemNumber = 0;
         }
 
         if (timeRemaining <= 0)
