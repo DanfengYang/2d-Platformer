@@ -11,7 +11,7 @@ public class WinningTrigger: MonoBehaviour
     [SerializeField] private TMP_FontAsset font1;
 
     public float timeRemaining = 15;
-    string youWonText = "You Won!!!";
+    string youWonText = "Congradulations! Proceeding...";
 
     bool won = false;
 
@@ -49,8 +49,8 @@ public class WinningTrigger: MonoBehaviour
         if (timeRemaining <= 0)
 
         {
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex + 1);
 
         }
     }
