@@ -5,7 +5,7 @@ using TMPro;
 
 public class HintsText2 : MonoBehaviour
 {
-    string hint1 = "The sign says: Can't jump high enough? Maybe move a BOX to this spot...(Yes, you can move a BOX. )";
+    string hint1 = "The sign says: BOXes are the greatest! BOXes can be moved around, helping you go to places you cannot reach...";
     string objective = "Try to escape from this place! ";
 
     [SerializeField] private TMP_Text hintsText;
