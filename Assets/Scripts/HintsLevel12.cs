@@ -7,7 +7,7 @@ public class HintsLevel12 : MonoBehaviour
 {
 
     string objective = "Try to escape from this place! ";
-    string hint1 = "BOX can be moved. When stepping on it you can move it on WOOD, but not on the GROUND. ";
+    string hint1 = "On WOOD you can move box when stepping on it. On the GROUND you can only move it from sides. ";
     //string hint2 = "The sign says: All 3 artifacts are collected! The ladder is now activated. Free free to jump on it.";
 
     //bool checkedLadder = false;

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class HintsLevel13 : MonoBehaviour
+public class HintsLevel15 : MonoBehaviour
 {
 
     string objective = "Try to escape from this place! ";
-    string hint1 = "A oneway door that only opens when you collected all 3 artifacts. You don't have all of them yet. ";
-    string hint2 = "You have collected all 3 artifacts! Hop right in! ";
+    string hint1 = "Oh hey there's a BOX! A BOX can be moved around, play with it!";
+    //string hint2 = "You have collected all 3 artifacts! Hop right in! ";
 
     //bool checkedLadder = false;
 
@@ -47,7 +47,7 @@ public class HintsLevel13 : MonoBehaviour
             else
             {
 
-                hintsText.text = hint2;
+                //hintsText.text = hint2;
             }
         }
 

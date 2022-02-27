@@ -7,7 +7,7 @@ public class HintsLevel1 : MonoBehaviour
 {
 
     string objective = "Try to escape from this place! ";
-    string hint1 = "The sign says: Collect all 3 artifacts and avoid spikes. ";
+    string hint1 = "The sign says: What a strange place... better not mess with the spikes. ";
     //string hint2 = "The sign says: All 3 artifacts are collected! The ladder is now activated. Free free to jump on it.";
 
     //bool checkedLadder = false;

@@ -14,7 +14,7 @@ public class LoseBlood : MonoBehaviour
 
 
     
-    public float timeRemaining = 3;
+    public float timeRemaining = 2;
     public int bloodCount = 15;
    
 
