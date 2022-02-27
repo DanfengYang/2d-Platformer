@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class HintsText1 : MonoBehaviour
+public class HintsLevel12 : MonoBehaviour
 {
 
     string objective = "Try to escape from this place! ";
-    string hint1 = "The sign says: To win, you need to collect all 3 artifacts to activate the sacred ladder. ";
-    string hint2 = "The sign says: All 3 artifacts are collected! The ladder is now activated. Free free to jump on it.";
+    string hint1 = "BOX can be moved. When stepping on it you can move it on WOOD, but not on the GROUND. ";
+    //string hint2 = "The sign says: All 3 artifacts are collected! The ladder is now activated. Free free to jump on it.";
 
     //bool checkedLadder = false;
 
@@ -47,7 +47,7 @@ public class HintsText1 : MonoBehaviour
             else
             {
 
-                hintsText.text = hint2;
+                //hintsText.text = hint2;
             }
         }
 

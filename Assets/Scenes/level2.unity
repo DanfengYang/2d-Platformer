@@ -674,7 +674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Try to escape from this place! '
+  m_text: 'Level2 Loaded! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
   m_sharedMaterial: {fileID: -8462500191768656509, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}

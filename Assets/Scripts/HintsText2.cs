@@ -13,7 +13,7 @@ public class HintsText2 : MonoBehaviour
 
     void Start()
     {
-        hintsText.text = objective;
+        //hintsText.text = objective;
         hintsText.font = font1;
     }
 

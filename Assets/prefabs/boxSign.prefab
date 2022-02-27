@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9170031569698738217}
   - component: {fileID: 9170031569698738216}
   - component: {fileID: 9170031569698738223}
-  - component: {fileID: 9170031569698738222}
   m_Layer: 0
   m_Name: boxSign
   m_TagString: Untagged
@@ -111,17 +110,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.856924, y: 1.477076}
   m_EdgeRadius: 0
---- !u!114 &9170031569698738222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9170031569698738221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf1c7e7a74dc54f1dbe546478a7a7de0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hintsText: {fileID: 0}
-  font1: {fileID: 11400000, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
