@@ -46,7 +46,7 @@ public class LoseBlood : MonoBehaviour
 
     {
         Debug.Log("hit ");
-        if (collision.gameObject.tag == "spike")
+        if (collision.gameObject.tag == "spike" && bloodCount >0)
         {
 
 

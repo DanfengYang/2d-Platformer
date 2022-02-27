@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -176}
-  m_SizeDelta: {x: 594.4071, y: 31.3766}
+  m_AnchoredPosition: {x: 0, y: -187.5}
+  m_SizeDelta: {x: 755.046, y: 56.1609}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &92494192
 MonoBehaviour:
@@ -313,7 +313,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2D Platformer Project! \nChoose any level by pressing the button"
+  m_text: "2D Platformer Project! \nChoose any level by pressing the button\nReturn
+    to this scene by pressing esc while playing"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
   m_sharedMaterial: {fileID: -8462500191768656509, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}

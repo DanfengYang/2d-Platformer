@@ -19,11 +19,12 @@ public class ResetScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
           
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Debug.Log("pressed esc");
+                SceneManager.LoadScene("openingScene");
 
             }
         }
