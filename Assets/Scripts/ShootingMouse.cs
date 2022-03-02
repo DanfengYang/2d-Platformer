@@ -9,58 +9,71 @@ using UnityEngine;
 
 public class ShootingMouse : MonoBehaviour
 {
-
+    //bool active;
 
     public GameObject explodePrefab;
     //assign this in inspector
+    bool enteredTrigger = false;
 
 
     void Update()
     {
-
-
         //mouse aiming: always face towards the mouse cursor position
-
-        Vector3 mouseCursorPositionInWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // transforming mouse position to a game space position
-
-        Vector2 fromPlayerToMouseCursor = mouseCursorPositionInWorld - transform.position;
-        // the distance  = mouse position - player posiion
-
-        transform.right = fromPlayerToMouseCursor;
-        Debug.DrawRay(transform.position, fromPlayerToMouseCursor, Color.cyan);
-
-
-        //fire a raycast from player to mouse 
-        Ray2D myRay = new Ray2D(transform.position, transform.right);
-        float myMaxRayDistance = 10f;
-
-
-        RaycastHit2D myRayHit = Physics2D.Raycast(myRay.origin, myRay.direction, myMaxRayDistance);
-
-
-
-
-        // instantiate something at impact point, if we hit something
-
-        if (myRayHit.collider != null && Input.GetMouseButtonDown(0))  // click to instantiate
+        if (enteredTrigger == true)
         {
-            //instantiate something at impact point 
-            Instantiate(explodePrefab, myRayHit.point, Quaternion.Euler(0, 0, 0));
+            Vector3 mouseCursorPositionInWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // transforming mouse position to a game space position
 
-            // now, delete/destroy the object the raycast hit
+            Vector2 fromPlayerToMouseCursor = mouseCursorPositionInWorld - transform.position;
+            float playerDistance = Vector2.SqrMagnitude(fromPlayerToMouseCursor);
+            // the distance  = mouse position - player posiion
+
+            transform.right = fromPlayerToMouseCursor;
+            Debug.DrawRay(transform.position, fromPlayerToMouseCursor, Color.cyan);
 
 
-            if (myRayHit.collider.tag == "remover")
+            //fire a raycast from player to mouse 
+            Ray2D myRay = new Ray2D(transform.position, transform.right);
+            float myMaxRayDistance = 1000f;
+
+
+            RaycastHit2D myRayHit = Physics2D.Raycast(myRay.origin, myRay.direction, myMaxRayDistance,1<<0);
+
+
+            // instantiate something at impact point, if we hit something
+
+            if (myRayHit.collider != null && Input.GetMouseButtonDown(0))
+                // click to instantiate
+                //&& myRayHit.collider.tag != "Player"
+                // && playerDistance<= 10f 
             {
-                //DestroyWithTag("remover");
+                //instantiate something at impact point 
+                Instantiate(explodePrefab, myRayHit.point, Quaternion.Euler(0, 0, 0));
 
-                Destroy(myRayHit.collider.gameObject);
+                // now, delete/destroy the object the raycast hit
+
+
+                if (myRayHit.collider.tag == "remover")
+                {
+                    //DestroyWithTag("remover");
+
+                    Destroy(myRayHit.collider.gameObject);
+                }
             }
         }
+    }
 
-        }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+
+            enteredTrigger = true;
+
+    }
+
+}
     //void DestroyWithTag(string destroyTag)
     //{
     //    GameObject[] destroyObject;
@@ -68,4 +81,4 @@ public class ShootingMouse : MonoBehaviour
     //    foreach (GameObject oneObject in destroyObject)
     //        Destroy(oneObject);
     //}
-}
+
