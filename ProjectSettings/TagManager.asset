@@ -6,6 +6,7 @@ TagManager:
   tags:
   - artifact
   - spike
+  - remover
   layers:
   - Default
   - TransparentFX
