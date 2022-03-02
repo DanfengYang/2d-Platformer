@@ -24,7 +24,7 @@ public class ResetScene : MonoBehaviour
           
             {
                 Debug.Log("pressed esc");
-                SceneManager.LoadScene("openingScene");
+                SceneManager.LoadScene("ManualOpenScene");
 
             }
         }
