@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Level 1 (the tutorial level) Loaded! \nTheme : Mental Problem"
+  m_text: "Level 1 (the tutorial level) Loaded! \n\"Human emotion.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
   m_sharedMaterial: {fileID: -8462500191768656509, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
@@ -4065,7 +4065,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: fedcca988dd424b0892074c6c626197b, type: 3}
-  m_Color: {r: 0.5283019, g: 0.4004628, b: 0.38625848, a: 1}
+  m_Color: {r: 0.6132076, g: 0.3037113, b: 0.31757683, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
