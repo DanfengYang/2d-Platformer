@@ -7,8 +7,8 @@ public class HintsText1 : MonoBehaviour
 {
 
     string objective = "Try to escape from this place! ";
-    string hint1 = "You need to collect all 3 artifacts to activate the sacred ladder. ";
-    string hint2 = "All 3 artifacts are collected! The ladder is now activated.";
+    string hint1 = "You need to see all 3 arts to activate the one way ladder. ";
+    string hint2 = "You have seen all three arts. The ladder is now activated.";
 
     //bool checkedLadder = false;
 

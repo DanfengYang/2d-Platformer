@@ -18,7 +18,7 @@ public class GainItem : MonoBehaviour
     public int itemNumber = 0;
     
 
-    string numberText = "Collected artifacts:";
+    string numberText = "Revealed arts:";
 
 
     void Start()

@@ -7,8 +7,8 @@ public class HintsLevel13 : MonoBehaviour
 {
 
     string objective = "Try to escape from this place! ";
-    string hint1 = "A oneway door that only opens when you collected all 3 artifacts. You don't have all of them yet. ";
-    string hint2 = "You have collected all 3 artifacts! Hop right in! ";
+    string hint1 = "A oneway door that only opens when you revealed all 3 arts. You haven't seen all of them yet. ";
+    string hint2 = "You have revealed all 3 arts! Hop right in! ";
 
     //bool checkedLadder = false;
 

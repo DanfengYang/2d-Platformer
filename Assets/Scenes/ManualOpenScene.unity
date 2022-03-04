@@ -423,8 +423,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2D Platformer Project! \nChoose any level by pressing the buttons\nReturn
-    to this scene by pressing esc while playing"
+  m_text: 'Welcome to Diane''s art gallery.
+
+    Choose any level by pressing the
+    buttons.
+
+    Return to this scene by pressing esc while playing.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
   m_sharedMaterial: {fileID: -8462500191768656509, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
@@ -940,7 +944,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: fedcca988dd424b0892074c6c626197b, type: 3}
-  m_Color: {r: 1, g: 0.3915094, b: 0.3915094, a: 1}
+  m_Color: {r: 0.3448736, g: 0.4716981, b: 0.46335897, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
