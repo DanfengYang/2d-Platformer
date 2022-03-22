@@ -8,6 +8,7 @@ TagManager:
   - spike
   - remover
   - cannon
+  - reveal
   layers:
   - Default
   - TransparentFX

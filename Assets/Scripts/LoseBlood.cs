@@ -26,12 +26,13 @@ public class LoseBlood : MonoBehaviour
 
     GameObject player;
     GainItem gainitem;
-    
 
+    public AudioSource myAudioSource;
 
     void Start()
     {
-        
+        myAudioSource = GetComponent<AudioSource>();
+
         bloodText.font = font1;
         losingText.font = font1;
 
@@ -53,7 +54,7 @@ public class LoseBlood : MonoBehaviour
 
 
             //Destroy(collision.gameObject);
-
+            myAudioSource.Play();
             bloodCount --;
             Debug.Log("blood = " + bloodCount);
             bloodText.text = currentBloodText + bloodCount;

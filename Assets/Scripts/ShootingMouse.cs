@@ -15,6 +15,13 @@ public class ShootingMouse : MonoBehaviour
     //assign this in inspector
     bool enteredTrigger = false;
 
+    public AudioSource myAudioSource;
+
+    private void Start()
+    {
+        myAudioSource = GetComponent<AudioSource>();
+    }
+
 
     void Update()
     {
@@ -49,6 +56,7 @@ public class ShootingMouse : MonoBehaviour
             {
                 //instantiate something at impact point 
                 Instantiate(explodePrefab, myRayHit.point, Quaternion.Euler(0, 0, 0));
+                myAudioSource.Play();
 
                 // now, delete/destroy the object the raycast hit
 
@@ -58,6 +66,7 @@ public class ShootingMouse : MonoBehaviour
                     //DestroyWithTag("remover");
 
                     Destroy(myRayHit.collider.gameObject);
+                    
                 }
             }
         }

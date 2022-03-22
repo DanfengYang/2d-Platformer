@@ -21,10 +21,15 @@ public class GainItem : MonoBehaviour
     string numberText = "Revealed arts:";
 
 
-    void Start()
+
+    
+        
+        void Start()
     {
         //artifactText.text = numberText;
         artifactText.font = font1;
+
+      
     }
 
 
@@ -33,7 +38,7 @@ public class GainItem : MonoBehaviour
 
 
     {
-        Debug.Log("hit ");
+        //Debug.Log("hit ");
         if (collision.gameObject.tag == "artifact") {
 
 
@@ -44,6 +49,7 @@ public class GainItem : MonoBehaviour
             itemNumber++;
             Debug.Log("item number = " + itemNumber);
             artifactText.text = numberText + itemNumber;
+           
 
 
         }
