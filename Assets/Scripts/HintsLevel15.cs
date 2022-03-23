@@ -7,7 +7,7 @@ public class HintsLevel15 : MonoBehaviour
 {
 
     string objective = "Try to escape from this place! ";
-    string hint1 = "Oh hey there's a BOX! A BOX can be moved around, play with it!";
+    string hint1 = "A BOX. A BOX can be moved around. It can also lift you up.";
     //string hint2 = "You have collected all 3 artifacts! Hop right in! ";
 
     //bool checkedLadder = false;

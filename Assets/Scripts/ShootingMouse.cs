@@ -9,13 +9,18 @@ using UnityEngine;
 
 public class ShootingMouse : MonoBehaviour
 {
-    //bool active;
+
+
+
+    
 
     public GameObject explodePrefab;
     //assign this in inspector
     bool enteredTrigger = false;
 
     public AudioSource myAudioSource;
+
+   
 
     private void Start()
     {
@@ -51,8 +56,7 @@ public class ShootingMouse : MonoBehaviour
 
             if (myRayHit.collider != null && Input.GetMouseButtonDown(0))
                 // click to instantiate
-                //&& myRayHit.collider.tag != "Player"
-                // && playerDistance<= 10f 
+                
             {
                 //instantiate something at impact point 
                 Instantiate(explodePrefab, myRayHit.point, Quaternion.Euler(0, 0, 0));
@@ -63,7 +67,7 @@ public class ShootingMouse : MonoBehaviour
 
                 if (myRayHit.collider.tag == "remover")
                 {
-                    //DestroyWithTag("remover");
+                   
 
                     Destroy(myRayHit.collider.gameObject);
                     
@@ -82,12 +86,7 @@ public class ShootingMouse : MonoBehaviour
 
     }
 
-}
-    //void DestroyWithTag(string destroyTag)
-    //{
-    //    GameObject[] destroyObject;
-    //    destroyObject = GameObject.FindGameObjectsWithTag(destroyTag);
-    //    foreach (GameObject oneObject in destroyObject)
-    //        Destroy(oneObject);
-    //}
+    
 
+}
+   

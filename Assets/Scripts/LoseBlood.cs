@@ -12,16 +12,19 @@ public class LoseBlood : MonoBehaviour
     [SerializeField] private TMP_Text losingText;
     [SerializeField] private TMP_FontAsset font1;
 
+    [SerializeField] private TMP_Text endingText;
 
-    
-    public float timeRemaining = 2;
+    public int timeLosing = 5;
     public int bloodCount = 10;
    
 
 
     string currentBloodText = "Current blood:";
-    string youLostText = "You Lost! Restarting...";
+    string youLostText = "You Lost. ";
+    string restartingText = "Restarting this level... ";
     string playingText = "   ";
+
+
 
 
     GameObject player;
@@ -46,7 +49,7 @@ public class LoseBlood : MonoBehaviour
 
 
     {
-        Debug.Log("hit ");
+        //Debug.Log("hit ");
         if (collision.gameObject.tag == "spike" && bloodCount >0)
         {
 
@@ -76,23 +79,40 @@ public class LoseBlood : MonoBehaviour
 
     void Update()
     {
-        if (timeRemaining > 0 && bloodCount <= 0)
+        if (timeLosing > 0 && bloodCount <= 0)
 
         {
             losingText.text = youLostText;
-            timeRemaining -= Time.deltaTime;
+            endingText.text = restartingText;
+
+            //timeRemaining -= Time.deltaTime;
             gainitem.itemNumber = 0;
+            StartCoroutine(RunTimer());
         }
 
-        if (timeRemaining <= 0)
-
-        {
-            
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-                }
     }
 
+
+    private IEnumerator RunTimer(){
+        
+        while (true)
+        {
+            yield return new WaitForSeconds(1.0f);
+            timeLosing --;
+            
+
+            if (timeLosing <= 0) {
+               
+
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+
+        }
+
+    }
+
+
+    
 
 }
 

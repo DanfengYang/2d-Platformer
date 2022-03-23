@@ -16,14 +16,14 @@ public class RevealedSound : MonoBehaviour
     // Update is called once per frame
 
 
-    void OnTriggerEnter2D(Collision2D collision)
-
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("entered");
 
-        if (collision.gameObject.tag == "reveal")
-        {
-            
+        if (collision.gameObject.tag == "Player")
+        
+            Debug.Log("entered");
+
+        
 
             if (!hasPlayed)
             {
@@ -31,7 +31,7 @@ public class RevealedSound : MonoBehaviour
                 hasPlayed = true;
             }
 
-        }
+        
 
     }
 

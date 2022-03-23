@@ -10,8 +10,11 @@ public class WinningTrigger: MonoBehaviour
     [SerializeField] private TMP_Text winningText;
     [SerializeField] private TMP_FontAsset font1;
 
-    public float timeRemaining = 15;
-    string youWonText = "Congradulations! Proceeding...";
+    [SerializeField] private TMP_Text endingText;
+
+    public int timeWinning = 5;
+    string youWonText = "Congradulations! You won this level. ";
+    string goOnText = "Proceeding...";
 
     bool won = false;
 
@@ -38,21 +41,38 @@ public class WinningTrigger: MonoBehaviour
 
     void Update()
     {
-        if (timeRemaining > 0 && won == true)
+        if (timeWinning > 0 && won == true)
 
         {
             winningText.text = youWonText;
-            timeRemaining -= Time.deltaTime;
+            endingText.text = youWonText;
+            //timeRemaining -= Time.deltaTime;
             gainitem.itemNumber = 0;
+            StartCoroutine(RunTimer());
         }
 
-        if (timeRemaining <= 0)
+        
+    }
 
+    private IEnumerator RunTimer()
+    {
+
+        while (true)
         {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            yield return new WaitForSeconds(1.0f);
+            timeWinning--;
 
+
+
+            if (timeWinning <= 0)
+
+            {
+                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(currentSceneIndex + 1);
+
+            }
         }
+
     }
 
 }
