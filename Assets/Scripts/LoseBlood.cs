@@ -14,7 +14,7 @@ public class LoseBlood : MonoBehaviour
 
     [SerializeField] private TMP_Text endingText;
 
-    public int timeLosing = 5;
+    public int timeLosing = 10;
     public int bloodCount = 10;
    
 

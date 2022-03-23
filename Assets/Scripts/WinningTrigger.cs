@@ -12,7 +12,7 @@ public class WinningTrigger: MonoBehaviour
 
     [SerializeField] private TMP_Text endingText;
 
-    public int timeWinning = 5;
+    public int timeWinning = 10;
     string youWonText = "Congradulations! You won this level. ";
     string goOnText = "Proceeding...";
 
