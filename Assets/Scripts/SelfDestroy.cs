@@ -6,7 +6,7 @@ public class SelfDestroy : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    int lifeTime = 3;
+    float lifeTime = 2;
     void Awake()
     {
         //Destroy(gameObject, lifeTime);
@@ -21,7 +21,7 @@ public class SelfDestroy : MonoBehaviour
         {
             yield return new WaitForSeconds(1.0f);
             lifeTime--;
-            Debug.Log(lifeTime--);
+            Debug.Log(lifeTime);
 
 
             if (lifeTime <= 0)

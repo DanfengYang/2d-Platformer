@@ -8087,7 +8087,7 @@ MonoBehaviour:
   winningText: {fileID: 2008272070}
   font1: {fileID: 11400000, guid: 2d0e5abe7a60d4b1a966b6e2dfb48154, type: 2}
   endingText: {fileID: 1583257000}
-  timeWinning: 5
+  timeWinning: 2
 --- !u!61 &766025631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21679,11 +21679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8928003866062982323, guid: c154e648b716e4e3c83dcde27c85de81, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.9002733
+      value: 3.3533986
       objectReference: {fileID: 0}
     - target: {fileID: 8928003866062982323, guid: c154e648b716e4e3c83dcde27c85de81, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.7075863
+      value: 4.4067717
       objectReference: {fileID: 0}
     - target: {fileID: 8928003866062982323, guid: c154e648b716e4e3c83dcde27c85de81, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21691,7 +21691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8928003866062982323, guid: c154e648b716e4e3c83dcde27c85de81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.1145
+      value: 17.9641
       objectReference: {fileID: 0}
     - target: {fileID: 8928003866062982323, guid: c154e648b716e4e3c83dcde27c85de81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23867,6 +23867,10 @@ PrefabInstance:
       propertyPath: losingText
       value: 
       objectReference: {fileID: 365573309}
+    - target: {fileID: 8933807135840065417, guid: 3b263d2b3dfb94c5cbb953e6e5a255c0, type: 3}
+      propertyPath: timeLosing
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8933807135840065417, guid: 3b263d2b3dfb94c5cbb953e6e5a255c0, type: 3}
       propertyPath: myAudioSource
       value: 

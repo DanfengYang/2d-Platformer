@@ -16,8 +16,8 @@ public class GainItem : MonoBehaviour
     
    
     public int itemNumber = 0;
-    
 
+    public float timeRemaining = 5;
     string numberText = "Revealed arts:";
 
 
@@ -60,14 +60,13 @@ public class GainItem : MonoBehaviour
         
 
     }
-
-
-
-
-
     
-    void Update()
-    {
-        
+
     }
-}
+
+
+
+
+
+
+

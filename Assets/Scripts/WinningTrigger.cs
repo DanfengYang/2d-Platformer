@@ -12,7 +12,7 @@ public class WinningTrigger: MonoBehaviour
 
     [SerializeField] private TMP_Text endingText;
 
-    public int timeWinning = 10;
+    public float timeWinning = 5;
     string youWonText = "Congradulations! You won this level. ";
     string goOnText = "Proceeding...";
 
@@ -45,7 +45,7 @@ public class WinningTrigger: MonoBehaviour
 
         {
             winningText.text = youWonText;
-            endingText.text = youWonText;
+            endingText.text = goOnText;
             //timeRemaining -= Time.deltaTime;
             gainitem.itemNumber = 0;
             StartCoroutine(RunTimer());
@@ -60,7 +60,7 @@ public class WinningTrigger: MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1.0f);
-            timeWinning--;
+            timeWinning-=Time.deltaTime;
 
 
 
